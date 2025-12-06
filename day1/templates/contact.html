@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Contact Page</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        /* 3D CONTAINER */
+        .contact-3d {
+            width: 350px;
+            padding: 30px;
+            background: #ffffff;
+            color: #000;
+            border-radius: 15px;
+            transform-style: preserve-3d;
+            transition: transform 0.8s;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .contact-3d:hover {
+            transform: rotateY(25deg) rotateX(15deg);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, textarea, button {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        button {
+            background: #2c5364;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0f2027;
+        }
+
+        /* 3D DEPTH FOR TEXT */
+        h2, input, textarea, button {
+            transform: translateZ(40px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="contact-3d">
+        <h2>Contact Us</h2>
+
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message"></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+</body>
+</html>
+
